@@ -25,7 +25,7 @@ export default function Textform(props) {
     {
       
       setText(event.target.value);
-      // console.log(event.target.value);
+      
     }
     
   return (

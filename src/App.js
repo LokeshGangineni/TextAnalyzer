@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 // import './App.css';
-   import Navbar from "./components/Navbar";
+   import About from "./components/About";
+import Navbar from "./components/Navbar";
    import Textform from "./components/Textform"
 // let name ="lokesh"
 function App() {
@@ -8,7 +9,8 @@ function App() {
     <>
       <Navbar title="TextAnalyzer" aboutText="About us"/>
       <div className="container my-3">
-      <Textform  heading="Enter text to analyze" />
+      {/* <Textform  heading="Enter text to analyze" /> */}
+      <About/>
       </div>
       
       {/* <Navbar /> */ }

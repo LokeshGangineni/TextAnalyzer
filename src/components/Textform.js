@@ -12,6 +12,10 @@ export default function Textform(props) {
       setText(newStr);
 
     }
+    const clearText=()=>
+    {
+      setText("");
+    }
     const handleLoClick=(event)=>
     {
       console.log("clicked on to uppercase");
@@ -25,6 +29,18 @@ export default function Textform(props) {
       setText(event.target.value);
       
     }
+    const selectText=()=>
+    {
+      let text=document.getElementById("myBox");
+      text.select();
+      // navigator.clipboard.writeText(text.value);
+    }
+    const copyText=()=>
+    {
+      let text=document.getElementById("myBox");
+      text.select();
+      navigator.clipboard.writeText(text.value);
+    }
     
   return (
     <>
@@ -37,6 +53,9 @@ export default function Textform(props) {
         </div>
         <button className="btn btn-primary" onClick={handleUpClick}>Convert to Uppercase</button>
         <button className="btn btn-primary mx-3" onClick={handleLoClick}>Convert to Uppercase</button>
+        <button className="btn btn-primary mx-1" onClick={clearText}>Clear Text</button>
+        <button className="btn btn-primary mx-1" onClick={selectText}>select Text</button>
+        <button className="btn btn-primary mx-1" onClick={copyText}>copy Text</button>
       </div> 
     </div>
     <div className="container my-10">

@@ -52,7 +52,7 @@ export default function Textform(props) {
             <textarea style={{width:'80em'}} name="" id="myBox" rows="9" value={text} onChange={handleOnChange} ></textarea>
         </div>
         <button className="btn btn-primary" onClick={handleUpClick}>Convert to Uppercase</button>
-        <button className="btn btn-primary mx-3" onClick={handleLoClick}>Convert to Uppercase</button>
+        <button className="btn btn-primary mx-3" onClick={handleLoClick}>Convert to Lowercase</button>
         <button className="btn btn-primary mx-1" onClick={clearText}>Clear Text</button>
         <button className="btn btn-primary mx-1" onClick={selectText}>select Text</button>
         <button className="btn btn-primary mx-1" onClick={copyText}>copy Text</button>

@@ -5,6 +5,7 @@ import About from "./components/About";
 import Navbar from "./components/Navbar";
 import Textform from "./components/Textform";
 import Alert from './components/Alert';
+import {BrowserRouter as Router,Routes,Route,Link} from 'react-router-dom';
 // let name ="lokesh"
 
  function App() {
@@ -51,37 +52,26 @@ import Alert from './components/Alert';
       }
     }
   return (
-    <>
-    
+    <Router>
+
     
       <Navbar title="TextAnalyzer" aboutText="About us" mode={mode} toggleMode={toggleMode} setCustomColor={setColor} changeColor={changeColor} />
       <Alert alert={alert}/>
       <div className="container my-3">
-      <Textform showAlert={showAlert} heading="Enter text to analyze"  />
+      {/* <Textform showAlert={showAlert} heading="Enter text to analyze"  /> */}
       {/* <About/> */}
       </div>
       
       {/* <Navbar /> */ }
-    </>
+    {/* </> */}
+
+    <Routes>
+      <Route path="/about" element={<About/>} />
+      <Route path="/" element={<Textform showAlert={showAlert} heading="Enter text to analyze"  />} />
+      </Routes>
+    </Router>
     
-    // <h1>Hi Welcome {name}</h1>
     
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React with Lokesh +0
-    //     </a>
-    //   </header>
-    // </div>
   );
 }
 
